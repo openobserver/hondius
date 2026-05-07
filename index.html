@@ -591,6 +591,17 @@
     "Planned quarantine transfer: Tenerife → Gómez Ulla Military Hospital (Madrid)",
     { color: "purple", weight: 2, opacity: 0.7, dashArray: "5, 7" }
   );
+
+  // Auto-fit map to all markers on load.
+  var bounds = L.latLngBounds([]);
+  points.forEach(function(p) {
+    bounds.extend([p.lat, p.lon]);
+  });
+  map_2805219d0e9f5a6b75bd5d8e74c1f521.fitBounds(bounds, {
+    padding: [60, 60],
+    maxZoom: 3
+  });
+  var legend = L.control({ position: "bottomleft" });
   
   var legend = L.control({ position: "bottomleft" });
   legend.onAdd = function () {
