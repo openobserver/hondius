@@ -283,15 +283,6 @@
       exposure: "Returnee-monitoring node rather than confirmed infection node."
     },
     {
-      name: "Netherlands",
-      lat: NETHERLANDS[0],
-      lon: NETHERLANDS[1],
-      kind: "medical_evacuation_planned_or_repatriation",
-      date: "reported 2026-05-06",
-      notes: "Reports said a British and a Dutch crew member were to be evacuated via Cape Verde to the Netherlands for urgent care. Separately, the Dutch woman in South Africa reportedly briefly boarded a KLM flight to the Netherlands but was removed before departure due to her medical condition.",
-      exposure: "Medical transfer and attempted-travel node; route details vary by patient."
-    },
-    {
       name: "Tenerife / Canary Islands, Spain",
       lat: 28.2916,
       lon: -16.6291,
@@ -525,6 +516,26 @@
   notes: "A KLM flight attendant who had contact in Johannesburg with a Dutch hantavirus patient was admitted here with mild symptoms and placed in isolation for testing.",
   exposure: "Secondary contact (non-passenger). Represents possible human-to-human transmission under investigation."
   },
+  {
+  name: "Leiden University Medical Center (LUMC), Netherlands",
+  lat: 52.1594,
+  lon: 4.4828,
+  kind: "confirmed_case",
+  icon: "plus-sign",
+  date: "reported 2026-05-07",
+  notes: "A passenger from the MV Hondius tested positive for hantavirus and is being treated under strict isolation.",
+  exposure: "Confirmed Andes hantavirus infection in a returned passenger."
+  },
+  {
+  name: "Radboud UMC, Nijmegen, Netherlands",
+  lat: 51.8216,
+  lon: 5.8660,
+  kind: "confirmed_case",
+  icon: "plus-sign",
+  date: "reported 2026-05-07",
+  notes: "A second passenger tested positive for hantavirus and is being treated in isolation.",
+  exposure: "Confirmed Andes hantavirus infection in a returned passenger."
+  },
     
   ];
 
@@ -578,13 +589,6 @@
     [PRAIA_OFFSHORE, PRAIA_AIRPORT],
     "Ship offshore near Praia → airport medical transfer",
     { color: "red", weight: 3, opacity: 0.8, dashArray: "4, 6" }
-  );
-
-  // Evacuation/return routes from Cape Verde, now starting at airport instead of offshore ship point.
-  addPolyline(
-    [PRAIA_AIRPORT, NETHERLANDS],
-    "Reported medical evacuation route: Praia Airport → Netherlands",
-    { color: "#3388ff", weight: 2, opacity: 0.7, dashArray: "7, 7" }
   );
 
   addPolyline(
