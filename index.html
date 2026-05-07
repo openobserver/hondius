@@ -601,6 +601,11 @@
     padding: [60, 60],
     maxZoom: 3
   });
+  
+  // iPhone / narrow-screen adjustment
+  if (window.innerWidth < 700) {
+    map_2805219d0e9f5a6b75bd5d8e74c1f521.setView([5, -5], 1.5);
+  }
   var legend = L.control({ position: "bottomleft" });
   
   var legend = L.control({ position: "bottomleft" });
